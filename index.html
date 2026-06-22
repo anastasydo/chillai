@@ -37,38 +37,49 @@
     .page::before {
       content: "";
       position: absolute;
-      inset: -28px;
+      inset: -24px;
       z-index: -4;
       background:
-        linear-gradient(180deg, rgba(3, 4, 5, 0.08) 0%, rgba(3, 4, 5, 0.18) 26%, rgba(3, 4, 5, 0.72) 68%, rgba(3, 4, 5, 0.96) 100%),
-        linear-gradient(90deg, rgba(3, 4, 5, 0.54), rgba(3, 4, 5, 0.12), rgba(3, 4, 5, 0.66)),
+        linear-gradient(
+          180deg,
+          rgba(3, 4, 5, 0.20) 0%,
+          rgba(3, 4, 5, 0.36) 20%,
+          rgba(3, 4, 5, 0.62) 52%,
+          rgba(3, 4, 5, 0.92) 100%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(3, 4, 5, 0.82) 0%,
+          rgba(3, 4, 5, 0.26) 42%,
+          rgba(3, 4, 5, 0.68) 100%
+        ),
+        radial-gradient(circle at 52% 18%, rgba(26, 39, 64, 0.22), transparent 28%),
         url("tempImagegckxIU.jpg") center top / cover no-repeat;
-      filter: blur(1.8px) saturate(0.78) contrast(0.92) brightness(0.78);
-      transform: scale(1.055);
+      filter: saturate(0.86) contrast(1.08) brightness(0.68);
+      transform: scale(1.025);
     }
 
     .page::after {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -3;
+      z-index: -2;
       pointer-events: none;
       background:
-        radial-gradient(circle at 50% 18%, rgba(255, 233, 206, 0.12), transparent 24%),
-        radial-gradient(circle at 50% 42%, transparent 18%, rgba(3, 4, 5, 0.34) 58%, rgba(0, 0, 0, 0.78) 100%),
-        linear-gradient(180deg, rgba(255, 225, 188, 0.04), rgba(0, 0, 0, 0.5));
-      mix-blend-mode: soft-light;
-      opacity: 0.95;
+        radial-gradient(circle at 50% 22%, rgba(255, 236, 212, 0.08), transparent 26%),
+        radial-gradient(circle at 50% 46%, transparent 20%, rgba(3, 4, 5, 0.42) 58%, rgba(0, 0, 0, 0.82) 100%),
+        linear-gradient(180deg, rgba(255, 228, 196, 0.02), rgba(0, 0, 0, 0.46));
+      opacity: 0.98;
     }
 
     .film-grain {
       position: absolute;
-      inset: -50%;
-      z-index: -2;
+      inset: -40%;
+      z-index: -1;
       pointer-events: none;
-      opacity: 0.22;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.15' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='0.58'/%3E%3C/svg%3E");
-      background-size: 140px 140px;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='0.62'/%3E%3C/svg%3E");
+      background-size: 130px 130px;
       mix-blend-mode: overlay;
       animation: grainMove 900ms steps(2) infinite;
     }
@@ -76,16 +87,16 @@
     .soft-haze {
       position: absolute;
       inset: 0;
-      z-index: -1;
+      z-index: 0;
       pointer-events: none;
       background:
-        linear-gradient(180deg, rgba(3, 4, 5, 0) 0%, rgba(3, 4, 5, 0.2) 43%, rgba(3, 4, 5, 0.78) 100%),
-        radial-gradient(circle at 50% 24%, rgba(255, 235, 210, 0.08), transparent 34%);
-      backdrop-filter: blur(0.4px);
-      -webkit-backdrop-filter: blur(0.4px);
+        linear-gradient(180deg, rgba(3, 4, 5, 0) 0%, rgba(3, 4, 5, 0.12) 28%, rgba(3, 4, 5, 0.62) 100%);
+      mix-blend-mode: normal;
     }
 
     .card {
+      position: relative;
+      z-index: 1;
       width: 100%;
       max-width: 430px;
       padding: 24px 20px 18px;
@@ -96,8 +107,8 @@
         rgba(18, 18, 20, 0.54),
         rgba(3, 4, 5, 0.46)
       );
-      backdrop-filter: blur(18px) saturate(0.88);
-      -webkit-backdrop-filter: blur(18px) saturate(0.88);
+      backdrop-filter: blur(16px) saturate(0.9);
+      -webkit-backdrop-filter: blur(16px) saturate(0.9);
       box-shadow:
         0 24px 80px rgba(0, 0, 0, 0.46),
         inset 0 1px 0 rgba(255, 255, 255, 0.055);
@@ -315,11 +326,27 @@
 
       .page::before {
         background:
-          linear-gradient(180deg, rgba(3, 4, 5, 0.08) 0%, rgba(3, 4, 5, 0.16) 24%, rgba(3, 4, 5, 0.7) 64%, rgba(3, 4, 5, 0.96) 100%),
-          linear-gradient(90deg, rgba(3, 4, 5, 0.5), rgba(3, 4, 5, 0.1), rgba(3, 4, 5, 0.62)),
+          linear-gradient(
+            180deg,
+            rgba(3, 4, 5, 0.24) 0%,
+            rgba(3, 4, 5, 0.40) 22%,
+            rgba(3, 4, 5, 0.64) 54%,
+            rgba(3, 4, 5, 0.96) 100%
+          ),
+          linear-gradient(
+            90deg,
+            rgba(3, 4, 5, 0.80) 0%,
+            rgba(3, 4, 5, 0.18) 46%,
+            rgba(3, 4, 5, 0.70) 100%
+          ),
           url("tempImagegckxIU.jpg") center top / cover no-repeat;
-        filter: blur(2px) saturate(0.76) contrast(0.9) brightness(0.76);
-        transform: scale(1.06);
+        filter: saturate(0.86) contrast(1.08) brightness(0.64);
+        transform: scale(1.03);
+      }
+
+      .film-grain {
+        opacity: 0.2;
+        background-size: 118px 118px;
       }
 
       .card {
@@ -339,8 +366,19 @@
 
       .page::before {
         background:
-          linear-gradient(180deg, rgba(3, 4, 5, 0.08) 0%, rgba(3, 4, 5, 0.16) 22%, rgba(3, 4, 5, 0.7) 62%, rgba(3, 4, 5, 0.97) 100%),
-          linear-gradient(90deg, rgba(3, 4, 5, 0.48), rgba(3, 4, 5, 0.08), rgba(3, 4, 5, 0.58)),
+          linear-gradient(
+            180deg,
+            rgba(3, 4, 5, 0.24) 0%,
+            rgba(3, 4, 5, 0.40) 20%,
+            rgba(3, 4, 5, 0.66) 52%,
+            rgba(3, 4, 5, 0.97) 100%
+          ),
+          linear-gradient(
+            90deg,
+            rgba(3, 4, 5, 0.82) 0%,
+            rgba(3, 4, 5, 0.16) 42%,
+            rgba(3, 4, 5, 0.68) 100%
+          ),
           url("tempImagegckxIU.jpg") center top / cover no-repeat;
       }
 
@@ -399,7 +437,6 @@
 
           <a class="button" href="https://syntx.ai/welcome/QNEO5ZuV" target="_blank" rel="noopener noreferrer">
             <span class="button-title">Syntx AI</span>
-            <span class="button-subtitle">15% скидка по промокоду DONEURO</span>
           </a>
         </div>
       </div>
