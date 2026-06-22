@@ -37,26 +37,51 @@
     .page::before {
       content: "";
       position: absolute;
-      inset: -24px;
-      z-index: -4;
+      inset: 0;
+      z-index: -5;
       background:
         linear-gradient(
           180deg,
-          rgba(18, 7, 5, 0.18) 0%,
-          rgba(26, 10, 7, 0.28) 18%,
-          rgba(30, 13, 8, 0.58) 52%,
+          rgba(18, 7, 5, 0.06) 0%,
+          rgba(26, 10, 7, 0.18) 20%,
+          rgba(30, 13, 8, 0.48) 55%,
           rgba(13, 7, 5, 0.94) 100%
         ),
         linear-gradient(
           90deg,
-          rgba(39, 14, 8, 0.62) 0%,
-          rgba(255, 178, 137, 0.05) 46%,
-          rgba(28, 11, 7, 0.66) 100%
+          rgba(39, 14, 8, 0.38) 0%,
+          rgba(255, 178, 137, 0.03) 46%,
+          rgba(28, 11, 7, 0.46) 100%
         ),
-        radial-gradient(circle at 52% 18%, rgba(255, 174, 122, 0.18), transparent 30%),
-        url("photo.jpg") center 4svh / auto 78svh no-repeat;
+        radial-gradient(circle at 50% 18%, rgba(255, 174, 122, 0.16), transparent 30%);
+      pointer-events: none;
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: -2%;
+      z-index: -4;
+      background:
+        url("photo.jpg") center 0svh / auto 102svh no-repeat;
       filter: saturate(0.92) contrast(1.04) brightness(0.72);
-      transform: scale(1);
+      transform: scale(1.01);
+      pointer-events: none;
+      -webkit-mask-image: radial-gradient(
+        circle at 50% 32%,
+        rgba(0, 0, 0, 1) 33%,
+        rgba(0, 0, 0, 0.98) 48%,
+        rgba(0, 0, 0, 0.8) 66%,
+        rgba(0, 0, 0, 0.35) 82%,
+        transparent 100%
+      );
+      mask-image: radial-gradient(
+        circle at 50% 32%,
+        rgba(0, 0, 0, 1) 33%,
+        rgba(0, 0, 0, 0.98) 48%,
+        rgba(0, 0, 0, 0.8) 66%,
+        rgba(0, 0, 0, 0.35) 82%,
+        transparent 100%
+      );
     }
 
     .page::after {
@@ -66,9 +91,9 @@
       z-index: -2;
       pointer-events: none;
       background:
-        radial-gradient(circle at 50% 18%, rgba(255, 214, 176, 0.12), transparent 24%),
-        radial-gradient(circle at 50% 42%, transparent 18%, rgba(42, 16, 10, 0.28) 60%, rgba(0, 0, 0, 0.82) 100%),
-        linear-gradient(180deg, rgba(255, 214, 176, 0.03), rgba(0, 0, 0, 0.42));
+        radial-gradient(circle at 50% 18%, rgba(255, 214, 176, 0.10), transparent 24%),
+        radial-gradient(circle at 50% 42%, transparent 18%, rgba(42, 16, 10, 0.24) 60%, rgba(0, 0, 0, 0.84) 100%),
+        linear-gradient(180deg, rgba(255, 214, 176, 0.02), rgba(0, 0, 0, 0.42));
       opacity: 0.98;
     }
 
@@ -77,7 +102,7 @@
       inset: -40%;
       z-index: -1;
       pointer-events: none;
-      opacity: 0.24;
+      opacity: 0.22;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.12' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
       background-size: 124px 124px;
       mix-blend-mode: overlay;
@@ -90,7 +115,7 @@
       z-index: 0;
       pointer-events: none;
       background:
-        linear-gradient(180deg, rgba(20, 8, 5, 0) 0%, rgba(20, 8, 5, 0.12) 34%, rgba(15, 8, 6, 0.7) 100%);
+        linear-gradient(180deg, rgba(20, 8, 5, 0) 0%, rgba(20, 8, 5, 0.10) 34%, rgba(15, 8, 6, 0.68) 100%);
     }
 
     .card {
@@ -323,29 +348,30 @@
         padding: 58svh 14px 16px;
       }
 
-      .page::before {
+      .hero-photo {
         background:
-          linear-gradient(
-            180deg,
-            rgba(18, 7, 5, 0.22) 0%,
-            rgba(28, 11, 7, 0.34) 20%,
-            rgba(30, 13, 8, 0.62) 54%,
-            rgba(13, 7, 5, 0.96) 100%
-          ),
-          linear-gradient(
-            90deg,
-            rgba(39, 14, 8, 0.62) 0%,
-            rgba(255, 178, 137, 0.04) 46%,
-            rgba(28, 11, 7, 0.66) 100%
-          ),
-          radial-gradient(circle at 52% 18%, rgba(255, 174, 122, 0.16), transparent 30%),
-          url("photo.jpg") center 3svh / auto 76svh no-repeat;
-        filter: saturate(0.92) contrast(1.05) brightness(0.69);
-        transform: scale(1);
+          url("photo.jpg") center 1svh / auto 100svh no-repeat;
+        filter: saturate(0.92) contrast(1.05) brightness(0.70);
+        -webkit-mask-image: radial-gradient(
+          circle at 50% 31%,
+          rgba(0, 0, 0, 1) 31%,
+          rgba(0, 0, 0, 0.98) 46%,
+          rgba(0, 0, 0, 0.78) 64%,
+          rgba(0, 0, 0, 0.32) 81%,
+          transparent 100%
+        );
+        mask-image: radial-gradient(
+          circle at 50% 31%,
+          rgba(0, 0, 0, 1) 31%,
+          rgba(0, 0, 0, 0.98) 46%,
+          rgba(0, 0, 0, 0.78) 64%,
+          rgba(0, 0, 0, 0.32) 81%,
+          transparent 100%
+        );
       }
 
       .film-grain {
-        opacity: 0.26;
+        opacity: 0.25;
         background-size: 114px 114px;
       }
 
@@ -364,23 +390,9 @@
         padding-top: 60svh;
       }
 
-      .page::before {
+      .hero-photo {
         background:
-          linear-gradient(
-            180deg,
-            rgba(18, 7, 5, 0.24) 0%,
-            rgba(28, 11, 7, 0.36) 20%,
-            rgba(31, 13, 8, 0.64) 52%,
-            rgba(13, 7, 5, 0.97) 100%
-          ),
-          linear-gradient(
-            90deg,
-            rgba(39, 14, 8, 0.64) 0%,
-            rgba(255, 178, 137, 0.03) 42%,
-            rgba(28, 11, 7, 0.68) 100%
-          ),
-          radial-gradient(circle at 52% 18%, rgba(255, 174, 122, 0.14), transparent 30%),
-          url("photo.jpg") center 2svh / auto 74svh no-repeat;
+          url("photo.jpg") center 1svh / auto 98svh no-repeat;
       }
 
       .name {
@@ -411,6 +423,7 @@
 
 <body>
   <main class="page">
+    <div class="hero-photo"></div>
     <div class="film-grain"></div>
     <div class="soft-vignette"></div>
 
