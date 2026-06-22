@@ -25,7 +25,7 @@
     .page {
       position: relative;
       min-height: 100svh;
-      padding: 61svh 16px 18px;
+      padding: 60svh 16px 18px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
@@ -43,12 +43,12 @@
       background:
         linear-gradient(
           180deg,
-          rgba(28, 10, 6, 0.16) 0%,
-          rgba(39, 14, 8, 0.18) 28%,
-          rgba(23, 9, 6, 0.58) 66%,
+          rgba(28, 10, 6, 0.12) 0%,
+          rgba(39, 14, 8, 0.16) 30%,
+          rgba(23, 9, 6, 0.54) 66%,
           rgba(9, 5, 4, 0.98) 100%
         ),
-        radial-gradient(circle at 50% 32%, rgba(255, 174, 122, 0.15), transparent 36%),
+        radial-gradient(circle at 52% 34%, rgba(255, 188, 142, 0.18), transparent 34%),
         #170b08;
     }
 
@@ -57,23 +57,22 @@
       inset: -2%;
       z-index: -5;
       pointer-events: none;
-      background: url("photo.jpg") 53% 5svh / auto 91svh no-repeat;
-      filter: saturate(0.98) contrast(1.03) brightness(0.84);
-      transform: scale(1);
+      background: url("photo.jpg") 53% 7svh / auto 88svh no-repeat;
+      filter: saturate(1.03) contrast(1.04) brightness(0.95);
       -webkit-mask-image: radial-gradient(
-        circle at 52% 36%,
-        rgba(0, 0, 0, 1) 28%,
-        rgba(0, 0, 0, 0.95) 48%,
-        rgba(0, 0, 0, 0.7) 68%,
-        rgba(0, 0, 0, 0.28) 84%,
+        circle at 52% 38%,
+        rgba(0, 0, 0, 1) 27%,
+        rgba(0, 0, 0, 0.96) 47%,
+        rgba(0, 0, 0, 0.72) 67%,
+        rgba(0, 0, 0, 0.3) 84%,
         transparent 100%
       );
       mask-image: radial-gradient(
-        circle at 52% 36%,
-        rgba(0, 0, 0, 1) 28%,
-        rgba(0, 0, 0, 0.95) 48%,
-        rgba(0, 0, 0, 0.7) 68%,
-        rgba(0, 0, 0, 0.28) 84%,
+        circle at 52% 38%,
+        rgba(0, 0, 0, 1) 27%,
+        rgba(0, 0, 0, 0.96) 47%,
+        rgba(0, 0, 0, 0.72) 67%,
+        rgba(0, 0, 0, 0.3) 84%,
         transparent 100%
       );
     }
@@ -85,13 +84,13 @@
       z-index: -3;
       pointer-events: none;
       background:
-        radial-gradient(circle at 52% 30%, rgba(255, 212, 177, 0.12), transparent 24%),
+        radial-gradient(circle at 51% 31%, rgba(255, 218, 184, 0.13), transparent 23%),
         linear-gradient(
           180deg,
-          rgba(22, 8, 5, 0.12) 0%,
-          rgba(22, 8, 5, 0.08) 34%,
-          rgba(18, 8, 6, 0.52) 60%,
-          rgba(7, 4, 3, 0.94) 100%
+          rgba(22, 8, 5, 0.08) 0%,
+          rgba(22, 8, 5, 0.05) 34%,
+          rgba(18, 8, 6, 0.48) 60%,
+          rgba(7, 4, 3, 0.95) 100%
         ),
         linear-gradient(
           90deg,
@@ -106,7 +105,7 @@
       inset: -40%;
       z-index: -1;
       pointer-events: none;
-      opacity: 0.18;
+      opacity: 0.16;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.12' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
       background-size: 124px 124px;
       mix-blend-mode: overlay;
@@ -122,7 +121,7 @@
         linear-gradient(
           180deg,
           rgba(20, 8, 5, 0) 0%,
-          rgba(20, 8, 5, 0.08) 36%,
+          rgba(20, 8, 5, 0.06) 36%,
           rgba(10, 5, 4, 0.72) 100%
         );
     }
@@ -132,13 +131,13 @@
       z-index: 1;
       width: 100%;
       max-width: 430px;
-      padding: 22px 18px 17px;
+      padding: 20px 18px 16px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 30px;
       background: linear-gradient(
         145deg,
         rgba(17, 9, 7, 0.5),
-        rgba(8, 5, 5, 0.42)
+        rgba(8, 5, 5, 0.43)
       );
       backdrop-filter: blur(14px) saturate(0.92);
       -webkit-backdrop-filter: blur(14px) saturate(0.92);
@@ -149,34 +148,34 @@
     }
 
     .name {
-      margin: 0 0 11px;
-      font-size: clamp(28px, 6.3vw, 40px);
+      margin: 0 0 10px;
+      font-size: clamp(28px, 6.1vw, 39px);
       line-height: 1.06;
       font-weight: 500;
       letter-spacing: -0.055em;
     }
 
     .subtitle {
-      margin: 0 0 23px;
-      color: rgba(245, 241, 234, 0.72);
-      font-size: clamp(16px, 3.9vw, 22px);
-      line-height: 1.32;
+      margin: 0 0 20px;
+      color: rgba(245, 241, 234, 0.74);
+      font-size: clamp(16px, 3.8vw, 21px);
+      line-height: 1.3;
       font-weight: 600;
       letter-spacing: -0.03em;
     }
 
     .links {
       display: grid;
-      gap: 11px;
+      gap: 10px;
     }
 
     .button {
       position: relative;
       display: block;
       overflow: hidden;
-      padding: 16px 17px;
+      padding: 15px 16px;
       border: 1px solid rgba(255, 255, 255, 0.13);
-      border-radius: 21px;
+      border-radius: 20px;
       color: #f5f1ea;
       text-decoration: none;
       background: linear-gradient(
@@ -232,7 +231,7 @@
       position: relative;
       z-index: 1;
       display: block;
-      font-size: 19px;
+      font-size: 18px;
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.04em;
@@ -242,47 +241,47 @@
       position: relative;
       z-index: 1;
       display: block;
-      margin-top: 7px;
-      color: rgba(245, 241, 234, 0.57);
-      font-size: 12px;
+      margin-top: 6px;
+      color: rgba(245, 241, 234, 0.6);
+      font-size: 11px;
       line-height: 1.35;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.08em;
     }
 
     .syntx-block {
       display: grid;
-      gap: 10px;
-      margin-top: 2px;
+      gap: 9px;
+      margin-top: 1px;
     }
 
     .syntx-note {
-      margin: 4px 0 0;
-      color: rgba(245, 241, 234, 0.6);
+      margin: 3px 0 0;
+      color: rgba(245, 241, 234, 0.62);
       font-size: 14px;
-      line-height: 1.42;
+      line-height: 1.4;
       font-weight: 600;
     }
 
     .collab {
-      margin-top: 23px;
-      padding-top: 18px;
+      margin-top: 21px;
+      padding-top: 16px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .collab-title {
-      margin: 0 0 14px;
-      color: rgba(245, 241, 234, 0.55);
+      margin: 0 0 12px;
+      color: rgba(245, 241, 234, 0.62);
       font-size: 12px;
       line-height: 1.2;
       font-weight: 700;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.075em;
       text-transform: uppercase;
     }
 
     .telegram {
-      padding: 18px 17px;
+      padding: 17px 16px;
       text-align: center;
       color: #1b100c;
       background: rgba(245, 241, 234, 0.94);
@@ -299,7 +298,7 @@
     }
 
     .telegram .button-title {
-      font-size: 21px;
+      font-size: 20px;
       letter-spacing: -0.045em;
     }
 
@@ -307,12 +306,12 @@
       display: flex;
       justify-content: space-between;
       gap: 14px;
-      margin-top: 20px;
-      color: rgba(245, 241, 234, 0.44);
+      margin-top: 18px;
+      color: rgba(245, 241, 234, 0.46);
       font-size: 11px;
       line-height: 1.2;
       font-weight: 700;
-      letter-spacing: 0.11em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -355,51 +354,51 @@
     @media (max-width: 520px) {
       .page {
         min-height: 100svh;
-        padding: 62svh 14px 16px;
+        padding: 61svh 14px 16px;
       }
 
       .hero-photo {
-        background: url("photo.jpg") 53% 4svh / auto 88svh no-repeat;
-        filter: saturate(1) contrast(1.03) brightness(0.86);
+        background: url("photo.jpg") 53% 7svh / auto 86svh no-repeat;
+        filter: saturate(1.04) contrast(1.04) brightness(0.98);
         -webkit-mask-image: radial-gradient(
-          circle at 52% 36%,
-          rgba(0, 0, 0, 1) 27%,
-          rgba(0, 0, 0, 0.95) 47%,
-          rgba(0, 0, 0, 0.7) 67%,
-          rgba(0, 0, 0, 0.28) 84%,
+          circle at 52% 38%,
+          rgba(0, 0, 0, 1) 26%,
+          rgba(0, 0, 0, 0.96) 46%,
+          rgba(0, 0, 0, 0.72) 66%,
+          rgba(0, 0, 0, 0.3) 84%,
           transparent 100%
         );
         mask-image: radial-gradient(
-          circle at 52% 36%,
-          rgba(0, 0, 0, 1) 27%,
-          rgba(0, 0, 0, 0.95) 47%,
-          rgba(0, 0, 0, 0.7) 67%,
-          rgba(0, 0, 0, 0.28) 84%,
+          circle at 52% 38%,
+          rgba(0, 0, 0, 1) 26%,
+          rgba(0, 0, 0, 0.96) 46%,
+          rgba(0, 0, 0, 0.72) 66%,
+          rgba(0, 0, 0, 0.3) 84%,
           transparent 100%
         );
       }
 
       .film-grain {
-        opacity: 0.2;
+        opacity: 0.18;
         background-size: 114px 114px;
       }
 
       .card {
-        padding: 21px 18px 17px;
+        padding: 20px 18px 16px;
         border-radius: 30px;
       }
 
       .name {
-        font-size: clamp(29px, 6.9vw, 38px);
+        font-size: clamp(29px, 6.7vw, 37px);
       }
 
       .subtitle {
-        margin-bottom: 22px;
+        margin-bottom: 20px;
       }
 
       .button {
-        padding: 16px;
-        border-radius: 21px;
+        padding: 15px 16px;
+        border-radius: 20px;
       }
 
       .button-title {
@@ -407,18 +406,18 @@
       }
 
       .button-subtitle {
-        font-size: 12px;
-        letter-spacing: 0.1em;
+        font-size: 11px;
+        letter-spacing: 0.075em;
       }
     }
 
     @media (max-width: 390px) {
       .page {
-        padding-top: 63svh;
+        padding-top: 62svh;
       }
 
       .hero-photo {
-        background: url("photo.jpg") 54% 4svh / auto 86svh no-repeat;
+        background: url("photo.jpg") 54% 7svh / auto 84svh no-repeat;
       }
 
       .name {
@@ -427,7 +426,7 @@
 
       .subtitle {
         font-size: 16px;
-        margin-bottom: 21px;
+        margin-bottom: 19px;
       }
 
       .button-title {
@@ -435,7 +434,7 @@
       }
 
       .telegram .button-title {
-        font-size: 20px;
+        font-size: 19px;
       }
     }
 
