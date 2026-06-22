@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#160907" />
+  <meta name="theme-color" content="#120706" />
   <title>Чудинова Анастасия</title>
 
   <style>
@@ -15,13 +15,13 @@
     body {
       margin: 0;
       min-height: 100%;
-      background: #160907;
+      background: #120706;
     }
 
     body {
       font-family: Inter, Arial, sans-serif;
       color: #f5f1ea;
-      background: #160907;
+      background: #120706;
     }
 
     .page {
@@ -34,57 +34,97 @@
       overflow: hidden;
       isolation: isolate;
       background:
-        radial-gradient(circle at 50% 26%, rgba(75, 24, 12, 0.36), transparent 43%),
-        linear-gradient(180deg, #1b0905 0%, #160907 42%, #080403 100%);
+        radial-gradient(circle at 50% 26%, rgba(75, 24, 12, 0.32), transparent 43%),
+        linear-gradient(180deg, #1b0905 0%, #120706 42%, #070302 100%);
     }
 
     .page::before {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -7;
+      z-index: -8;
       pointer-events: none;
       background:
-        radial-gradient(circle at 50% 26%, rgba(124, 42, 18, 0.28), transparent 38%),
-        radial-gradient(circle at 52% 48%, rgba(255, 150, 94, 0.08), transparent 40%),
+        radial-gradient(circle at 50% 24%, rgba(120, 38, 15, 0.28), transparent 39%),
         linear-gradient(
           180deg,
-          rgba(28, 10, 6, 0.3) 0%,
-          rgba(28, 10, 6, 0.2) 38%,
-          rgba(12, 5, 4, 0.88) 100%
+          rgba(28, 10, 6, 0.28) 0%,
+          rgba(18, 7, 5, 0.22) 38%,
+          rgba(7, 3, 2, 0.96) 100%
         );
     }
 
-    .hero-photo {
+    .hero-backdrop {
       position: absolute;
-      inset: 0;
-      z-index: -5;
+      inset: -8%;
+      z-index: -7;
       pointer-events: none;
       background-image: url("photo.jpg");
       background-position: center top;
       background-size: cover;
       background-repeat: no-repeat;
-      filter: saturate(1.04) contrast(1.04) brightness(0.95);
-      transform: scale(1.045);
+      filter: blur(22px) saturate(1.08) contrast(1.05) brightness(0.58);
+      transform: scale(1.08);
       transform-origin: center top;
+      opacity: 0.92;
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: -6% -18% -8%;
+      z-index: -5;
+      pointer-events: none;
+      background-image: url("photo.jpg");
+      background-position: 53% 5svh;
+      background-size: auto 92svh;
+      background-repeat: no-repeat;
+      filter: saturate(1.04) contrast(1.04) brightness(0.94);
       -webkit-mask-image:
         linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(0, 0, 0, 0.22) 5%,
+          rgba(0, 0, 0, 0.82) 15%,
+          #000 28%,
+          #000 72%,
+          rgba(0, 0, 0, 0.82) 85%,
+          rgba(0, 0, 0, 0.22) 95%,
+          transparent 100%
+        ),
+        linear-gradient(
           180deg,
-          #000 0%,
-          #000 66%,
-          rgba(0, 0, 0, 0.78) 80%,
-          rgba(0, 0, 0, 0.24) 94%,
+          transparent 0%,
+          rgba(0, 0, 0, 0.45) 4%,
+          #000 12%,
+          #000 70%,
+          rgba(0, 0, 0, 0.72) 82%,
+          rgba(0, 0, 0, 0.22) 94%,
           transparent 100%
         );
       mask-image:
         linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(0, 0, 0, 0.22) 5%,
+          rgba(0, 0, 0, 0.82) 15%,
+          #000 28%,
+          #000 72%,
+          rgba(0, 0, 0, 0.82) 85%,
+          rgba(0, 0, 0, 0.22) 95%,
+          transparent 100%
+        ),
+        linear-gradient(
           180deg,
-          #000 0%,
-          #000 66%,
-          rgba(0, 0, 0, 0.78) 80%,
-          rgba(0, 0, 0, 0.24) 94%,
+          transparent 0%,
+          rgba(0, 0, 0, 0.45) 4%,
+          #000 12%,
+          #000 70%,
+          rgba(0, 0, 0, 0.72) 82%,
+          rgba(0, 0, 0, 0.22) 94%,
           transparent 100%
         );
+      -webkit-mask-composite: source-in;
+      mask-composite: intersect;
     }
 
     .page::after {
@@ -96,24 +136,24 @@
       background:
         linear-gradient(
           90deg,
-          rgba(8, 3, 3, 1) 0%,
-          rgba(8, 3, 3, 0.92) 5%,
-          rgba(8, 3, 3, 0.42) 16%,
-          rgba(8, 3, 3, 0.09) 34%,
-          rgba(8, 3, 3, 0.08) 66%,
-          rgba(8, 3, 3, 0.42) 84%,
-          rgba(8, 3, 3, 0.92) 95%,
-          rgba(8, 3, 3, 1) 100%
+          rgba(7, 3, 2, 0.98) 0%,
+          rgba(7, 3, 2, 0.76) 7%,
+          rgba(7, 3, 2, 0.2) 20%,
+          rgba(7, 3, 2, 0.04) 38%,
+          rgba(7, 3, 2, 0.04) 62%,
+          rgba(7, 3, 2, 0.22) 80%,
+          rgba(7, 3, 2, 0.78) 93%,
+          rgba(7, 3, 2, 0.98) 100%
         ),
         linear-gradient(
           180deg,
-          rgba(16, 7, 5, 0.22) 0%,
-          rgba(16, 7, 5, 0.04) 23%,
-          rgba(16, 7, 5, 0.18) 48%,
-          rgba(9, 4, 3, 0.92) 91%,
-          rgba(7, 4, 3, 1) 100%
+          rgba(12, 5, 4, 0.18) 0%,
+          rgba(12, 5, 4, 0.04) 28%,
+          rgba(10, 4, 3, 0.24) 52%,
+          rgba(7, 3, 2, 0.96) 92%,
+          rgba(7, 3, 2, 1) 100%
         ),
-        radial-gradient(circle at 51% 31%, rgba(255, 218, 184, 0.11), transparent 23%);
+        radial-gradient(circle at 51% 31%, rgba(255, 218, 184, 0.1), transparent 23%);
     }
 
     .film-grain {
@@ -145,7 +185,7 @@
           180deg,
           rgba(20, 8, 5, 0) 0%,
           rgba(20, 8, 5, 0.06) 34%,
-          rgba(10, 5, 4, 0.74) 100%
+          rgba(7, 3, 2, 0.78) 100%
         );
     }
 
@@ -380,12 +420,18 @@
         padding: 59svh 14px 16px;
       }
 
-      .hero-photo {
-        inset: 0;
+      .hero-backdrop {
+        inset: -10%;
         background-position: center top;
-        background-size: cover;
-        filter: saturate(1.04) contrast(1.04) brightness(0.96);
-        transform: scale(1.055);
+        filter: blur(24px) saturate(1.08) contrast(1.05) brightness(0.56);
+        transform: scale(1.1);
+      }
+
+      .hero-photo {
+        inset: -6% -20% -8%;
+        background-position: 53% 5svh;
+        background-size: auto 90svh;
+        filter: saturate(1.04) contrast(1.04) brightness(0.95);
       }
 
       .film-grain {
@@ -427,9 +473,8 @@
       }
 
       .hero-photo {
-        background-position: center top;
-        background-size: cover;
-        transform: scale(1.06);
+        background-position: 54% 5svh;
+        background-size: auto 88svh;
       }
 
       .name {
@@ -469,6 +514,7 @@
 
 <body>
   <main class="page">
+    <div class="hero-backdrop"></div>
     <div class="hero-photo"></div>
     <div class="film-grain"></div>
     <div class="soft-vignette"></div>
