@@ -19,67 +19,61 @@
     body {
       font-family: Inter, Arial, sans-serif;
       color: #f5f1ea;
-      background: #1b0d09;
+      background: #170b08;
     }
 
     .page {
       position: relative;
       min-height: 100svh;
-      padding: 56svh 16px 18px;
+      padding: 61svh 16px 18px;
       display: flex;
       align-items: flex-start;
       justify-content: center;
       overflow: hidden;
       isolation: isolate;
-      background: #1b0d09;
+      background: #170b08;
     }
 
     .page::before {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -5;
+      z-index: -6;
+      pointer-events: none;
       background:
         linear-gradient(
           180deg,
-          rgba(18, 7, 5, 0.06) 0%,
-          rgba(26, 10, 7, 0.18) 20%,
-          rgba(30, 13, 8, 0.48) 55%,
-          rgba(13, 7, 5, 0.94) 100%
+          rgba(28, 10, 6, 0.16) 0%,
+          rgba(39, 14, 8, 0.18) 28%,
+          rgba(23, 9, 6, 0.58) 66%,
+          rgba(9, 5, 4, 0.98) 100%
         ),
-        linear-gradient(
-          90deg,
-          rgba(39, 14, 8, 0.38) 0%,
-          rgba(255, 178, 137, 0.03) 46%,
-          rgba(28, 11, 7, 0.46) 100%
-        ),
-        radial-gradient(circle at 50% 18%, rgba(255, 174, 122, 0.16), transparent 30%);
-      pointer-events: none;
+        radial-gradient(circle at 50% 32%, rgba(255, 174, 122, 0.15), transparent 36%),
+        #170b08;
     }
 
     .hero-photo {
       position: absolute;
       inset: -2%;
-      z-index: -4;
-      background:
-        url("photo.jpg") center 0svh / auto 102svh no-repeat;
-      filter: saturate(0.92) contrast(1.04) brightness(0.72);
-      transform: scale(1.01);
+      z-index: -5;
       pointer-events: none;
+      background: url("photo.jpg") 53% 5svh / auto 91svh no-repeat;
+      filter: saturate(0.98) contrast(1.03) brightness(0.84);
+      transform: scale(1);
       -webkit-mask-image: radial-gradient(
-        circle at 50% 32%,
-        rgba(0, 0, 0, 1) 33%,
-        rgba(0, 0, 0, 0.98) 48%,
-        rgba(0, 0, 0, 0.8) 66%,
-        rgba(0, 0, 0, 0.35) 82%,
+        circle at 52% 36%,
+        rgba(0, 0, 0, 1) 28%,
+        rgba(0, 0, 0, 0.95) 48%,
+        rgba(0, 0, 0, 0.7) 68%,
+        rgba(0, 0, 0, 0.28) 84%,
         transparent 100%
       );
       mask-image: radial-gradient(
-        circle at 50% 32%,
-        rgba(0, 0, 0, 1) 33%,
-        rgba(0, 0, 0, 0.98) 48%,
-        rgba(0, 0, 0, 0.8) 66%,
-        rgba(0, 0, 0, 0.35) 82%,
+        circle at 52% 36%,
+        rgba(0, 0, 0, 1) 28%,
+        rgba(0, 0, 0, 0.95) 48%,
+        rgba(0, 0, 0, 0.7) 68%,
+        rgba(0, 0, 0, 0.28) 84%,
         transparent 100%
       );
     }
@@ -88,13 +82,23 @@
       content: "";
       position: absolute;
       inset: 0;
-      z-index: -2;
+      z-index: -3;
       pointer-events: none;
       background:
-        radial-gradient(circle at 50% 18%, rgba(255, 214, 176, 0.10), transparent 24%),
-        radial-gradient(circle at 50% 42%, transparent 18%, rgba(42, 16, 10, 0.24) 60%, rgba(0, 0, 0, 0.84) 100%),
-        linear-gradient(180deg, rgba(255, 214, 176, 0.02), rgba(0, 0, 0, 0.42));
-      opacity: 0.98;
+        radial-gradient(circle at 52% 30%, rgba(255, 212, 177, 0.12), transparent 24%),
+        linear-gradient(
+          180deg,
+          rgba(22, 8, 5, 0.12) 0%,
+          rgba(22, 8, 5, 0.08) 34%,
+          rgba(18, 8, 6, 0.52) 60%,
+          rgba(7, 4, 3, 0.94) 100%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(16, 7, 5, 0.56) 0%,
+          rgba(255, 178, 137, 0.02) 48%,
+          rgba(16, 7, 5, 0.58) 100%
+        );
     }
 
     .film-grain {
@@ -102,7 +106,7 @@
       inset: -40%;
       z-index: -1;
       pointer-events: none;
-      opacity: 0.22;
+      opacity: 0.18;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.12' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23n)' opacity='0.7'/%3E%3C/svg%3E");
       background-size: 124px 124px;
       mix-blend-mode: overlay;
@@ -115,7 +119,12 @@
       z-index: 0;
       pointer-events: none;
       background:
-        linear-gradient(180deg, rgba(20, 8, 5, 0) 0%, rgba(20, 8, 5, 0.10) 34%, rgba(15, 8, 6, 0.68) 100%);
+        linear-gradient(
+          180deg,
+          rgba(20, 8, 5, 0) 0%,
+          rgba(20, 8, 5, 0.08) 36%,
+          rgba(10, 5, 4, 0.72) 100%
+        );
     }
 
     .card {
@@ -123,61 +132,61 @@
       z-index: 1;
       width: 100%;
       max-width: 430px;
-      padding: 24px 20px 18px;
+      padding: 22px 18px 17px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 30px;
       background: linear-gradient(
         145deg,
-        rgba(18, 10, 8, 0.54),
-        rgba(8, 5, 5, 0.46)
+        rgba(17, 9, 7, 0.5),
+        rgba(8, 5, 5, 0.42)
       );
-      backdrop-filter: blur(12px) saturate(0.88);
-      -webkit-backdrop-filter: blur(12px) saturate(0.88);
+      backdrop-filter: blur(14px) saturate(0.92);
+      -webkit-backdrop-filter: blur(14px) saturate(0.92);
       box-shadow:
-        0 24px 80px rgba(0, 0, 0, 0.42),
+        0 24px 78px rgba(0, 0, 0, 0.46),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
       animation: cardAppear 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
     }
 
     .name {
-      margin: 0 0 12px;
-      font-size: clamp(30px, 7vw, 44px);
-      line-height: 1.05;
+      margin: 0 0 11px;
+      font-size: clamp(28px, 6.3vw, 40px);
+      line-height: 1.06;
       font-weight: 500;
       letter-spacing: -0.055em;
     }
 
     .subtitle {
-      margin: 0 0 26px;
+      margin: 0 0 23px;
       color: rgba(245, 241, 234, 0.72);
-      font-size: clamp(17px, 4.2vw, 24px);
-      line-height: 1.3;
+      font-size: clamp(16px, 3.9vw, 22px);
+      line-height: 1.32;
       font-weight: 600;
       letter-spacing: -0.03em;
     }
 
     .links {
       display: grid;
-      gap: 12px;
+      gap: 11px;
     }
 
     .button {
       position: relative;
       display: block;
       overflow: hidden;
-      padding: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 22px;
+      padding: 16px 17px;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 21px;
       color: #f5f1ea;
       text-decoration: none;
       background: linear-gradient(
         145deg,
-        rgba(255, 255, 255, 0.09),
-        rgba(255, 255, 255, 0.04)
+        rgba(255, 255, 255, 0.085),
+        rgba(255, 255, 255, 0.035)
       );
       box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.04),
-        0 10px 26px rgba(0, 0, 0, 0.12);
+        0 10px 24px rgba(0, 0, 0, 0.12);
       transition:
         transform 0.22s ease,
         background 0.22s ease,
@@ -195,7 +204,7 @@
       background: linear-gradient(
         110deg,
         transparent,
-        rgba(255, 255, 255, 0.11),
+        rgba(255, 255, 255, 0.1),
         transparent
       );
       transform: skewX(-18deg);
@@ -204,11 +213,11 @@
 
     .button:hover {
       transform: translateY(-2px);
-      border-color: rgba(255, 255, 255, 0.24);
+      border-color: rgba(255, 255, 255, 0.23);
       background: linear-gradient(
         145deg,
         rgba(255, 255, 255, 0.12),
-        rgba(255, 255, 255, 0.06)
+        rgba(255, 255, 255, 0.055)
       );
       box-shadow:
         0 14px 34px rgba(0, 0, 0, 0.22),
@@ -223,7 +232,7 @@
       position: relative;
       z-index: 1;
       display: block;
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 600;
       line-height: 1.2;
       letter-spacing: -0.04em;
@@ -234,48 +243,49 @@
       z-index: 1;
       display: block;
       margin-top: 7px;
-      color: rgba(245, 241, 234, 0.58);
-      font-size: 13px;
+      color: rgba(245, 241, 234, 0.57);
+      font-size: 12px;
       line-height: 1.35;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.11em;
     }
 
     .syntx-block {
       display: grid;
       gap: 10px;
+      margin-top: 2px;
     }
 
     .syntx-note {
-      margin: 6px 0 0;
-      color: rgba(245, 241, 234, 0.66);
-      font-size: 15px;
-      line-height: 1.45;
+      margin: 4px 0 0;
+      color: rgba(245, 241, 234, 0.6);
+      font-size: 14px;
+      line-height: 1.42;
       font-weight: 600;
     }
 
     .collab {
-      margin-top: 26px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.11);
+      margin-top: 23px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .collab-title {
-      margin: 0 0 16px;
-      color: rgba(245, 241, 234, 0.58);
-      font-size: 14px;
+      margin: 0 0 14px;
+      color: rgba(245, 241, 234, 0.55);
+      font-size: 12px;
       line-height: 1.2;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
     }
 
     .telegram {
-      padding: 20px 18px;
+      padding: 18px 17px;
       text-align: center;
       color: #1b100c;
-      background: rgba(245, 241, 234, 0.93);
+      background: rgba(245, 241, 234, 0.94);
       border-color: rgba(245, 241, 234, 0.9);
       box-shadow:
         0 18px 42px rgba(0, 0, 0, 0.22),
@@ -289,7 +299,7 @@
     }
 
     .telegram .button-title {
-      font-size: 22px;
+      font-size: 21px;
       letter-spacing: -0.045em;
     }
 
@@ -297,12 +307,12 @@
       display: flex;
       justify-content: space-between;
       gap: 14px;
-      margin-top: 22px;
-      color: rgba(245, 241, 234, 0.46);
-      font-size: 12px;
+      margin-top: 20px;
+      color: rgba(245, 241, 234, 0.44);
+      font-size: 11px;
       line-height: 1.2;
       font-weight: 700;
-      letter-spacing: 0.13em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
     }
 
@@ -345,62 +355,87 @@
     @media (max-width: 520px) {
       .page {
         min-height: 100svh;
-        padding: 58svh 14px 16px;
+        padding: 62svh 14px 16px;
       }
 
       .hero-photo {
-        background:
-          url("photo.jpg") center 1svh / auto 100svh no-repeat;
-        filter: saturate(0.92) contrast(1.05) brightness(0.70);
+        background: url("photo.jpg") 53% 4svh / auto 88svh no-repeat;
+        filter: saturate(1) contrast(1.03) brightness(0.86);
         -webkit-mask-image: radial-gradient(
-          circle at 50% 31%,
-          rgba(0, 0, 0, 1) 31%,
-          rgba(0, 0, 0, 0.98) 46%,
-          rgba(0, 0, 0, 0.78) 64%,
-          rgba(0, 0, 0, 0.32) 81%,
+          circle at 52% 36%,
+          rgba(0, 0, 0, 1) 27%,
+          rgba(0, 0, 0, 0.95) 47%,
+          rgba(0, 0, 0, 0.7) 67%,
+          rgba(0, 0, 0, 0.28) 84%,
           transparent 100%
         );
         mask-image: radial-gradient(
-          circle at 50% 31%,
-          rgba(0, 0, 0, 1) 31%,
-          rgba(0, 0, 0, 0.98) 46%,
-          rgba(0, 0, 0, 0.78) 64%,
-          rgba(0, 0, 0, 0.32) 81%,
+          circle at 52% 36%,
+          rgba(0, 0, 0, 1) 27%,
+          rgba(0, 0, 0, 0.95) 47%,
+          rgba(0, 0, 0, 0.7) 67%,
+          rgba(0, 0, 0, 0.28) 84%,
           transparent 100%
         );
       }
 
       .film-grain {
-        opacity: 0.25;
+        opacity: 0.2;
         background-size: 114px 114px;
       }
 
       .card {
-        padding: 22px 18px 18px;
+        padding: 21px 18px 17px;
         border-radius: 30px;
       }
 
+      .name {
+        font-size: clamp(29px, 6.9vw, 38px);
+      }
+
+      .subtitle {
+        margin-bottom: 22px;
+      }
+
       .button {
+        padding: 16px;
         border-radius: 21px;
+      }
+
+      .button-title {
+        font-size: 18px;
+      }
+
+      .button-subtitle {
+        font-size: 12px;
+        letter-spacing: 0.1em;
       }
     }
 
     @media (max-width: 390px) {
       .page {
-        padding-top: 60svh;
+        padding-top: 63svh;
       }
 
       .hero-photo {
-        background:
-          url("photo.jpg") center 1svh / auto 98svh no-repeat;
+        background: url("photo.jpg") 54% 4svh / auto 86svh no-repeat;
       }
 
       .name {
-        font-size: 31px;
+        font-size: 29px;
       }
 
       .subtitle {
-        margin-bottom: 24px;
+        font-size: 16px;
+        margin-bottom: 21px;
+      }
+
+      .button-title {
+        font-size: 17px;
+      }
+
+      .telegram .button-title {
+        font-size: 20px;
       }
     }
 
